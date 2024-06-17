@@ -1,0 +1,29 @@
+SETUP:-> 
+
+# Virtual Environment:->
+* python -m venv flask_venv (flask_venv is the environment name).
+
+# Activate Scripts:->
+* .\flask_venv\Scripts\activate
+You may counter the below mentioned error while activating the flask
+* Error:
++ CategoryInfo          : SecurityError: (:) [], PSSecurityException
++ FullyQualifiedErrorId : UnauthorizedAccess
+
+* Solution:
+ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# Installing Flask
+* pip install flask
+
+# Base Url
+* http://127.0.0.1:5000/ and anything after that will be called end points.
+
+# Setting up environment variable.
+* $env:FLASK_ENV="development"
+
+# Preventing pycache file from being created.
+* $env:PYTHONDONTWRITEBYTECODE=1
+
+# What is make_response
+* we can use to send custom headers, as well as change the property (like status_code, mimetype, etc.) in response.
